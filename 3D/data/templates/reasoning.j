@@ -1,0 +1,3 @@
+You are to reason about how to solve this task, and predict the five physical properties of the cue striking the cue ball that will fulfil the task's requirements. When you make a prediction, a separate program will take those predictions and simulate the shot. The results will be shown to you and you will be given the opportunity to adapt, re-attempt, and improve your prediction.
+As an expert pool player, be sure to think step by step when reasoning about this task, and break down the problem into its most important components in order to reason about them one by one.
+### Reasoning

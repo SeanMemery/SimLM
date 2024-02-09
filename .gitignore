@@ -2,3 +2,6 @@ __pycache__/
 OLD/
 results/
 figures/
+.vscode/
+webserver/
+.env

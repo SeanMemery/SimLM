@@ -1,0 +1,19 @@
+llm:
+  ctx_n: 4096
+  temperature: 0.7
+  top_k: 40
+  top_p: 0.9
+  num_predict: 256
+
+method_iterations:
+  random:   1000
+  simlm:    0
+  baseline: 0
+  discrete: 0
+
+profile: True
+few_shot: 0
+rel_boards: 2
+evaluation_set: "latest"
+visualizable: False
+max_shots: 3

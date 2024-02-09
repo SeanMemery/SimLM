@@ -1,0 +1,327 @@
+[
+    {
+        "prompt":"Pot ball red into pocket rt (Right Top).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket rt"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red into pocket rc (Right Centre).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket rc"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red into pocket rb (Right Back).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket rb"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red into pocket lt (Left Top).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket lt"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red into pocket lc (Left Centre).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket lc"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red into pocket lb (Left Back).",
+        "rack":"oneball",        
+        "complexity": 1,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket lb"
+        ],
+        "fail":[
+            "Ball cue fell into pocket"
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball 2, but not Ball red.",
+        "rack":"twoball",        
+        "complexity": 3,
+        "function": false,
+        "pass":[
+            "Ball 2 fell into pocket "
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket "
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Pot ball red, but not ball 2.",
+        "rack":"twoball",        
+        "complexity": 3,
+        "function": false,
+        "pass":[
+            "Ball red fell into pocket "
+        ],
+        "fail":[
+            "Ball 2 fell into pocket ",
+            "Ball cue fell into pocket "
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Bounce the cue ball off a cushion, then Pot ball red but not ball 2, in a single shot.",
+        "rack":"twoball",        
+        "complexity": 3,
+        "function": false,
+        "pass":[
+            "Ball cue collided with cushion ",
+            "Ball red fell into pocket "
+        ],
+        "fail":[
+            "Ball 2 fell into pocket ",
+            "Ball cue fell into pocket "
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket rt (Right Top).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,rt)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket "
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket rc (Right Centre).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,rc)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket "
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket rb (Right Back).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,rb)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket "        
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket lt (Left Top).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,lt)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket " 
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket lc (Left Centre).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,lc)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket " 
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    },
+    {
+        "prompt":"Knock Ball red near, but not into, pocket lb (Left Back).",
+        "rack":"oneball",        
+        "complexity": 2,
+        "function": true,
+        "pass":[
+            "NEAR_POCKET:(red,lb)"
+        ],
+        "fail":[
+            "Ball red fell into pocket ",
+            "Ball cue fell into pocket " 
+        ],
+        "conditions":{
+        "pass":[
+                "all",
+                "ordered"
+            ],
+            "fail":[
+                "any"
+            ]
+        }
+    }
+]

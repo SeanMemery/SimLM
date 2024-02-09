@@ -1,8 +1,0 @@
-pymunk
-pygame
-tqdm
-PyYAML
-numpy
-matplotlib
-pandas
-scipy

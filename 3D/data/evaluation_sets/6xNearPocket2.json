@@ -1,0 +1,152 @@
+{
+    "details": {
+        "conditions": {
+            "rack": [
+                "oneball"
+            ],
+            "complexity": [
+                2
+            ]
+        },
+        "name": "6xNearPocket2",
+        "description": "Updated near pocket tasks - Changed templates, possibly changed context to working in Ollama, added outcome field",
+        "amounts": {
+            "total": 6,
+            "oneball": 6
+        }
+    },
+    "prompts": {
+        "reasoning": "You are an expert pool player and are tasked with choosing the physical properties of a cue striking the cue ball. These properties are:\nSPEED: cue speed ~ [0,5]\nPHI: cue azimuth ~ [0,360]\nTHETA: cue elevation ~ [0,90]\nX: x contact position on cue ball ~ [-1,1]\nZ: z contact position on cue ball ~ [-1,1]\nKeep in mind while performing this task the importance of each property on the behaviour of the cue ball during the shot. \n1. Very importantly, when viewing the table from top down a value of PHI=0 will hit cue ball to the east, i.e. in the positive x direction. Then, PHI=90 is north (positive y), PHI=180 is west (negative x), and PHI=270 is south (negative y).\n2. The (X,Z) value controls the amount of ENGLISH applied to the cue ball, a value of (0,0) and low THETA would strike the cue ball at its centre with a near level stick, making for a smooth ball motion with little to no spin. But, a negative z (or high THETA) will impart a back spin, and the opposite will impart a top spin, which have their own benefits.\nThere are also certain rules you MUST follow when taking a shot in pool:\n- Make sure the cue ball does not fall into a pocket\n- Make sure the cue ball collides with a ball\nYou will be penalized for breaking these rules.\nThese are the coordinates of each pocket on the table:\nPocket lb (Left Back): (0.00, 0.00)\nPocket lc (Left Centre): (0.00, 1.00)\nPocket lt (Left Top): (0.00, 2.00)\nPocket rb (Right Back): (1.00, 0.00)\nPocket rc (Right Centre): (1.00, 1.00)\nPocket rt (Right Top): (1.00, 2.00)\nNow, the current state of the board (i.e. the position of each ball) is given below:\n{{ board_state }}\n{% if examples %}\nBelow are a series of examples of tasks carried out on similar boards. Use these reasoning examples to learn and adapt your own reasoning.\n{% for example in examples %}\n### Example {{ loop.index }}: \n{{ example }}\n{% endfor %}\n{% endif %}\nIn this case, you're task is:\n{{ task }}\nYou MUST accomplish this task, without breaking the rules.\nYou are to reason about how to solve this task, and predict the five physical properties of the cue striking the cue ball that will fulfil the task's requirements. When you make a prediction, a separate program will take those predictions and simulate the shot. The results will be shown to you and you will be given the opportunity to adapt and improve your prediction.\nAs an expert pool player, be sure to think step by step when reasoning about this task, and break down the problem into its most important components in order to reason about them one by one.\n### Reasoning",
+        "simulation": "### Results\n----- SIMULATION OUTPUT START -----\nAfter simulating the shot on a pool table, these were the events that occurred. Keep in mind which events may be relevant to the current task.\n{{ events }}\nAfter the simulation, this is now the state of the board, i.e. the position of each ball on the table.\n{{ board_state }}\n----- SIMULATION OUTPUT END -----\n",
+        "prediction": "Therefore, the prediction of the physical properties of the cue stick striking the cue ball is below, given in the EXACT values, with each property in caps, on a newline, and an equal sign to its value e.g. \"SPEED=5\":\n### Prediction",
+        "critique": "Now, based on the simulation results, I will critique my previous reasoning and attempt to improve my next prediction, in order take a new shot to achieve the task.\n### Critique"
+    },
+    "tasks": [
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket rt (Right Top).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,rt)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 0
+        },
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket rc (Right Centre).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,rc)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 1
+        },
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket rb (Right Back).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,rb)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 2
+        },
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket lt (Left Top).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,lt)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 3
+        },
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket lc (Left Centre).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,lc)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 4
+        },
+        {
+            "prompt": "Knock ball 1 near, but not into, pocket lb (Left Back).",
+            "rack": "oneball",
+            "pass": [
+                "NEAR_POCKET:(1,lb)"
+            ],
+            "fail": [
+                "Ball 1 fell into pocket ",
+                "Ball cue fell into pocket "
+            ],
+            "conditions": {
+                "pass": [
+                    "all",
+                    "ordered"
+                ],
+                "fail": [
+                    "any"
+                ]
+            },
+            "task_id": 5
+        }
+    ]
+}

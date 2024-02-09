@@ -1,0 +1,3 @@
+[submodule "pooltool-text"]
+	path = 3D/pooltool-text
+	url = https://github.com/seanmemery/pooltool-text.git
